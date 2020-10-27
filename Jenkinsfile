@@ -1,13 +1,10 @@
 @Library('jenkins-pipeline-shared-lib-sample')_
-def appName = "Test Application"
 pipeline {
     agent any
       stages {
         stage('Print Build Info') {
             steps {
-                printBuildinfo {
-                echo "${appName}"
-                }
+                echo "Test Application"
             }
         }
         
