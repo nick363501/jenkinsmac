@@ -1,6 +1,8 @@
 @Library('jenkins-pipeline-shared-lib-sample')_
 pipeline {
-    agent any
+    agent {
+        any
+    }
       stages {
         stage('Print Build Info') {
             steps {
