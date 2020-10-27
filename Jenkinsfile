@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Jenkinsfile"
-                println cuturl.jenkinsUrl
+                echo  "$cuturl.jenkinsUrl"
             }
         }
     }
