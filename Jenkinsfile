@@ -1,4 +1,4 @@
-@Library('jenkins-pipeline-shared-lib-sample@newFeature')_
+@Library('jenkins-pipeline-shared-lib-sample@master')_
 pipeline {
     agent any
     environment {
