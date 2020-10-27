@@ -1,7 +1,8 @@
 @Library('jenkins-pipeline-shared-lib-sample')_
 pipeline {
-    agent {
-        any
+    agent any
+    environment {
+        appName = "Test Application Master"
     }
       stages {
         stage('Print Build Info') {
