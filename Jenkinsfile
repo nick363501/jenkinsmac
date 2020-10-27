@@ -5,6 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Jenkinsfile"
+                cuturl()
             }
         }
     }
