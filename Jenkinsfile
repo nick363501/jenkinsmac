@@ -3,21 +3,35 @@ pipeline {
     agent any
       stages {
         stage('Print Build Info') {
-            printBuildinfo {
-            name = "Sample Name"
+            steps {
+                printBuildinfo {
+                name = "Sample Name"
+                }
+            }
+        }
+        
+        stage('Disable balancer') {
+            steps {
+                disableBalancerUtils()
+            }
+        }
+        
+
+        stage('Deploy') {
+            steps {
+                deploy()
+            } 
+        }
+        stage('Enable balancer') {
+            steps {
+                enableBalancerUtils()
             }
         } 
-        stage('Disable balancer') {
-            disableBalancerUtils()
-        } 
-        stage('Deploy') {
-            deploy()
-        } 
-        stage('Enable balancer') {
-            enableBalancerUtils()
-        } 
+        
         stage('Check Status') {
-            checkStatus()
+            steps {
+                checkStatus()
+            }
         }
       }
 }
