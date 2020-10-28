@@ -7,7 +7,7 @@ pipeline {
       stages {
         stage('Print Build Info') {
             steps {
-                echo "${appName}"ß
+                echo "${appName}"
             }
         }
         
