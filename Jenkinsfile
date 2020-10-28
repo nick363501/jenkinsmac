@@ -1,4 +1,4 @@
-@Library('jenkins-pipeline-shared-lib-sample@masterß')_
+@Library('jenkins-pipeline-shared-lib-sample@master')_
 pipeline {
     agent any
     environment {
@@ -7,7 +7,8 @@ pipeline {
       stages {
         stage('Print Build Info') {
             steps {
-                echo "${appName}"ß
+                echo "${appName}"
+                testtags()
             }
         }
         
