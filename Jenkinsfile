@@ -8,7 +8,7 @@ pipeline {
         stage('Print Build Info') {
             steps {
                 echo "${appName}"
-                cuturl()ß
+                cuturl()
             }
         }
         
